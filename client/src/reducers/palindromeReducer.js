@@ -7,7 +7,7 @@ export default function(state = [], action = {}) {
     case actions.FETCH_PALINDROMES_FAILED:
       return state;
     case actions.ADD_PALINDROME_SUCCEEDED:
-      return [...state, action.payload];
+      return [action.payload, ...state];
     case actions.ADD_PALINDROME_FAILED:
       return state;
     case actions.REMOVE_PALINDROME_SUCCEEDED:

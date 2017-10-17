@@ -6,7 +6,7 @@ const PalindromeChecker = require('../utils/PalindromeChecker');
 
 module.exports = app => {
   app.get('/api/palindromes', async (req, res) => {
-    const list = await Palindrome.find({});
+    const list = await Palindrome.find({}).sort({ date: -1 });
 
     res.send(list);
   });
