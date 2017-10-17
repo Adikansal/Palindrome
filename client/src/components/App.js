@@ -85,7 +85,7 @@ class App extends Component {
       <div className="App">
         <div className="container d-flex align-items-stretch flex-column">
           <div className="mb-3">
-            <div className="alert alert-light">
+            <div className="alert alert-light" style={{ padding: 0 }}>
               <small>
                 This application checks whether <strong>any permutation</strong>{' '}
                 of an input string is <strong>a palindrome</strong>

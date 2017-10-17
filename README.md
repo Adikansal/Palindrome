@@ -8,7 +8,7 @@ Palindrome Checker Demo
 
 ## Getting Started
 
-This application checks whether any permutation of an input string is a palindrome. This application was implemented in Node.js/Express, React/Redux, Bootstrap 4, Mongo DB and is running on Heroku.
+This application checks whether any permutation of an input string is a palindrome. This application was implemented of Node.js/Express, React/Redux, Bootstrap 4, Mongo DB and is running on Heroku.
 
 ### Prerequisites
 
