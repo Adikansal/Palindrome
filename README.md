@@ -17,7 +17,7 @@ Please note that PalindromeChecker function can be tested with JSFiddle
 [https://jsfiddle.net/ozlongblack/qusu6yL7](https://jsfiddle.net/ozlongblack/qusu6yL7/)
 
 
-The following recursive function was used for permutation.
+The following recursive function is used for permutation.
 
 ```
 permutate(arr = this.input.split(''), permuted = []) {
@@ -42,7 +42,7 @@ permutate(arr = this.input.split(''), permuted = []) {
 }
 ```
 
-The following function was used for palindrome check.
+The following function is used for palindrome check.
 
 ```
 isPalindrome(input) {
@@ -50,6 +50,43 @@ isPalindrome(input) {
     input === input.split('').reverse().join('')
   );
 }
+```
+
+HTTP Methods(GET, POST, DELETE) are used to fetch|add|remove data.
+
+```
+const mongoose = require('mongoose');
+const Palindrome = mongoose.model('palindromes');
+const PalindromeChecker = require('../utils/PalindromeChecker');
+
+module.exports = app => {
+  app.get('/api/palindromes', async (req, res) => {
+    const list = await Palindrome.find({}).sort({ date: -1 });
+
+    res.send(list);
+  });
+
+  app.post('/api/palindromes', async (req, res) => {
+    const { string } = req.body;
+    const palindromeChecker = new PalindromeChecker(string);
+
+    const palindrome = new Palindrome({
+      string,
+      isPalindrome: palindromeChecker.permutate(),
+      date: Date.now()
+    });
+
+    await palindrome.save();
+    res.send(palindrome);
+  });
+
+  app.delete('/api/palindromes/:id', async (req, res) => {
+    const { id } = req.params;
+
+    const removed = await Palindrome.findOneAndRemove({ _id: id });
+    res.send(removed);
+  });
+};
 ```
 
 ## Built With

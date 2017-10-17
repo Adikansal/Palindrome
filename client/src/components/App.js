@@ -112,10 +112,8 @@ class App extends Component {
             </div>
           </div>
           <div className="mt-auto palindrome-list">
-            <div className="">
-              <div className="list-group" role="tablist">
-                {this.renderList()}
-              </div>
+            <div className="list-group" role="tablist">
+              {this.renderList()}
             </div>
           </div>
         </div>
