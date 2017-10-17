@@ -13,7 +13,9 @@ This application checks whether any permutation of an input string is a palindro
 ### Prerequisites
 
 Please note that PalindromeChecker function can be tested with JSFiddle
+
 [https://jsfiddle.net/ozlongblack/qusu6yL7](https://jsfiddle.net/ozlongblack/qusu6yL7/)
+
 
 The following recursive function was used for permutation.
 
@@ -40,7 +42,7 @@ permutate(arr = this.input.split(''), permuted = []) {
 }
 ```
 
-The following function was used for palindrome check
+The following function was used for palindrome check.
 
 ```
 isPalindrome(input) {
