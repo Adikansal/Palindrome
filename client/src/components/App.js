@@ -117,6 +117,31 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <div className="footer d-flex align-items-stretch flex-column">
+          <div>
+            <small>Copyright © 2017 ozlongblack@gmail.com</small>
+          </div>
+          <div>
+            <span className="mr-1">
+              <a
+                href="https://github.com/ozlongblack/palindrome"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <small>VIEW REPOSITORY</small>
+              </a>
+            </span>|
+            <span className="ml-1">
+              <a
+                href="https://www.linkedin.com/in/kihwan-cho-88440470/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <small>VIEW PROFILE</small>
+              </a>
+            </span>
+          </div>
+        </div>
       </div>
     );
   }

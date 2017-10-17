@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   flex: 1;
+  flex-direction: column;
   height: 100vh;
   padding: 1em;
   text-align: center;
@@ -21,4 +22,13 @@
 .palindrome-list {
   height: 55vh;
   overflow-y: auto;
+}
+
+.footer {
+  color: #fff;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
 }

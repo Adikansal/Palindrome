@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
-
 const Palindrome = mongoose.model('palindromes');
-
 const PalindromeChecker = require('../utils/PalindromeChecker');
 
 module.exports = app => {
