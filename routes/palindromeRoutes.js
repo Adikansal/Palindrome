@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Palindrome = mongoose.model('palindromes');
-const PalindromeChecker = require('../utils/PalindromeChecker');
+const checkPalindrome = require('../utils/checkPalindrome');
 
 module.exports = app => {
   app.get('/api/palindromes', async (req, res) => {
@@ -11,11 +11,11 @@ module.exports = app => {
 
   app.post('/api/palindromes', async (req, res) => {
     const { string } = req.body;
-    const palindromeChecker = new PalindromeChecker(string);
+    const checked = checkPalindrome(string);
 
     const palindrome = new Palindrome({
       string,
-      isPalindrome: palindromeChecker.permutate(),
+      isPalindrome: checked,
       date: Date.now()
     });
 
